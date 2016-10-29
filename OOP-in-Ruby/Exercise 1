@@ -1,0 +1,57 @@
+##Question 1
+
+class MyCar
+	
+	def initialize (year,color,model)
+		@year=year
+		@color=color
+		@model=model
+		speed=0
+	end
+
+	def speedup (acc)
+		speed=0+acc
+	end
+
+	def brake(dec)
+		speed=0-dec
+	end
+
+	def shut
+		speed=0
+	end
+
+	attr_accessor :color
+
+end
+
+car1=MyCar.new("2016","pink","audi")
+puts car1.color
+car1.speedup(20)
+car1.brake(20)
+car1.shut
+
+##Question 2
+
+class HerCar
+
+ 	attr_accessor :color
+ 	attr_reader :year
+
+ end
+
+ car1.color='black'
+ puts car1.color 
+
+##Question 3
+
+class MyCar
+
+ 	def spray_paint(new)
+ 		@color=new
+ 	end
+
+end
+
+car1.spray_paint('yellow')
+puts car1.color
