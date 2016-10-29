@@ -1,0 +1,99 @@
+##Question 1
+
+class Vehicle
+	
+	def initialize (year,color,model)
+		@year=year
+		@color=color
+		@model=model
+		speed=0
+	end
+
+	def speedup (acc)
+		speed=0+acc
+	end
+
+	def brake(dec)
+		speed=0-dec
+	end
+
+	def shut
+		speed=0
+	end
+
+end 
+
+##Question 2
+
+class MyCar < Vehicle
+
+	properties="xx"
+
+end
+
+class MyTruck < Vehicle
+
+	properties="xx"
+
+end 
+
+##Question 3
+
+module Carvstruck
+
+	def engine
+
+		properties = "The difference between car and truck is the engine"
+
+	end 
+
+end 
+
+class MyCar < Vehicle
+
+	include Carvstruck
+
+end
+
+
+car2=MyCar.new("2016","pink","audi")
+puts car2.engine
+
+## Question 6
+
+private
+
+def age (yrofpurchase,yrsofwarranty)
+	vehage = yrofpurchase - yrsofwarranty
+end 
+
+## Question 7
+
+class Student
+
+	def initialize (name,grade)
+		@name=name
+		@grade=grade
+	end
+
+	private
+
+	def grades
+		puts @grade
+	end
+
+end
+
+
+joe=Student.new(joe,"A")
+
+joe.grades
+
+## Question 8
+
+# Redefine the private method 'hi' outside the private section 
+
+def public_method
+	hi
+end 
+
